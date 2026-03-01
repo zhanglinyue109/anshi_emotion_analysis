@@ -18,6 +18,22 @@ xlm_roberta_large/
 *.xlsx
 *.docx
 *.jsonl
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.npz
+*.pkl
+*.pickle
+
+# Sensitive / important local files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets/
+private/
 
 # Generated images from experiments
 *.png
