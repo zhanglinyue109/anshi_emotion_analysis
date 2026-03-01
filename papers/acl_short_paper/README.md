@@ -5,6 +5,7 @@
 ## 文件说明
 
 - `PLAN_ZH.md`：给新手的完整执行方案（中文）。
+- `ACL2026_REQUIREMENTS_AND_GAP_PLAN_20260301.md`：ACL 2026 官方要求、缺口识别与补全计划。
 - `main.tex`：英文 LaTeX 草稿（ACL 风格）。
 - `refs.bib`：参考文献占位（必须人工核实后替换）。
 - `figures/`：建议放论文用图（可选）。
