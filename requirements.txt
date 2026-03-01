@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+openai
+tqdm
+torch
+transformers
+httpx
+krippendorff
+openpyxl

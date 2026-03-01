@@ -94,7 +94,7 @@
 3. 一个公开仓库（本仓库）含：
 - `README.md`
 - `docs/PROJECT_ORGANIZATION_ZH.md`
-- `Papers/acl_short_paper/`
+- `papers/acl_short_paper/`
 
 ## 6. 常见错误（新手高频）
 

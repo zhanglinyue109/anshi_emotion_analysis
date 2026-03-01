@@ -3,7 +3,7 @@ from transformers import XLMRobertaTokenizer, XLMRobertaModel
 from transformers import DistilBertForSequenceClassification, XLMRobertaForSequenceClassification
 import torch.nn as nn
 
-from mymodel import XLMRobertaForSequenceClassificationSig
+from src.mymodel import XLMRobertaForSequenceClassificationSig
 
 class XLMRVARegressor(nn.Module):
     def __init__(self, model_path):

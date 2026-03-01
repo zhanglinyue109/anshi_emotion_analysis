@@ -46,6 +46,15 @@ tmp/
 awesome-ai-research-writing/
 chinese_emobank/
 
+# Local data staging (keep structure, ignore payloads)
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/README.md
+
 # Keep paper assets tracked
-!Papers/**/figures/
-!Papers/**/figures/*.png
+!papers/**/figures/
+!papers/**/figures/*.png

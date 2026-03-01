@@ -6,7 +6,7 @@ from transformers import XLMRobertaTokenizer
 import torch.nn as nn
 
 # 假设你的自定义模型在 mymodel.py 中
-from mymodel import XLMRobertaForSequenceClassificationSig
+from src.mymodel import XLMRobertaForSequenceClassificationSig
 
 class XLMRVARegressor(nn.Module):
     def __init__(self, model_path):
