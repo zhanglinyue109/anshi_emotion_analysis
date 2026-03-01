@@ -1,8 +1,11 @@
 .DS_Store
+__MACOSX/
+～/
 __pycache__/
 *.pyc
 .venv/
 venv/
+.claude/
 
 # Large model artifacts (not suitable for GitHub)
 models/
@@ -13,6 +16,7 @@ xlm_roberta_large/
 
 # Large raw/derived data
 *.xlsx
+*.docx
 *.jsonl
 
 # Generated images from experiments
@@ -21,6 +25,10 @@ xlm_roberta_large/
 # Local temp
 *.log
 tmp/
+
+# External / third-party directories kept local only
+awesome-ai-research-writing/
+chinese_emobank/
 
 # Keep paper assets tracked
 !Papers/**/figures/
