@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large model artifacts (not suitable for GitHub)
+models/
+xlm_roberta_large/
+*.onnx
+*.bin
+*.npy
+
+# Large raw/derived data
+*.xlsx
+*.jsonl
+
+# Generated images from experiments
+*.png
+
+# Local temp
+*.log
+tmp/
+
+# Keep paper assets tracked
+!Papers/**/figures/
+!Papers/**/figures/*.png

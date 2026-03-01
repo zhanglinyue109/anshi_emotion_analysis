@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[UTF8]{ctex}
+
+\title{Emotion Shifts in Classical Chinese Poetry\\Around the An Lushan Rebellion: A Reproducible Short-Paper Pipeline}
+
+\author{
+Anonymous ACL submission
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a reproducible pipeline for analyzing emotion shifts in Classical Chinese poetry around a major historical event, the An Lushan Rebellion.
+Starting from poem-level records, we build sentence-level data, perform emotion annotation, and combine embedding-based clustering with temporal and author-level aggregation.
+Our workflow is designed for low-resource literary analysis settings where modern NLP benchmarks do not transfer directly.
+We provide a compact short-paper template and an implementation-oriented repository structure to support fast replication and extension.
+\end{abstract}
+
+\section{Introduction}
+
+Historical literary corpora offer rich evidence for cultural and emotional dynamics, but they are challenging for contemporary NLP due to archaic language, sparse supervision, and domain-specific semantics.
+Classical Chinese poetry is a representative case: emotional expression is dense yet implicit, and large historical events can alter tone, imagery, and rhetorical style.
+
+This paper focuses on emotion shifts around the An Lushan Rebellion and contributes a practical short-paper pipeline that can be reused by beginners and domain researchers.
+Compared with a purely narrative digital humanities workflow, our approach emphasizes reproducibility with script-level input/output chains and explicit data transformations.
+
+Our main contributions are:
+\begin{itemize}
+    \item A sentence-level emotion analysis pipeline for Classical Chinese poetry.
+    \item A combined view of emotion through annotation, clustering, and temporal-author analysis.
+    \item A submission-ready repository layout for ACL-style short papers.
+\end{itemize}
+
+We position this work at the intersection of literary NLP and emotion analysis
+\cite{PLACEHOLDER_literary_nlp_survey,PLACEHOLDER_chinese_emotion_resource}.
+
+\section{Task and Data}
+
+\subsection{Problem Formulation}
+
+Given a collection of poems with metadata (author, year, location), our goal is to estimate how emotion distributions change before, during, and after a major historical disruption.
+We treat each poem as a set of sentence-level units and analyze both fine-grained emotional labels and unsupervised semantic clusters of emotional statements.
+
+\subsection{Data Processing Pipeline}
+
+Our data pipeline follows three deterministic stages:
+
+\begin{enumerate}
+    \item \textbf{Poem-to-sentence conversion}: parse poem text, remove bracketed notes, split by punctuation, and preserve metadata.
+    \item \textbf{Emotion annotation}: assign sentence-level emotional tags (with optional multi-rater checks).
+    \item \textbf{Aggregation and analysis}: compute year/author/location summaries and run embedding + clustering for latent emotional themes.
+\end{enumerate}
+
+The implementation is script-driven and documented with explicit input/output files in the repository.
+
+\section{Method}
+
+\subsection{Sentence-Level Annotation}
+
+We transform each poem into sentence instances and annotate emotion labels for each sentence.
+This step yields a structured table suitable for both descriptive statistics and machine-learning analyses.
+When two annotators are available, we report agreement indicators and confusion patterns.
+
+\subsection{Embedding and Clustering}
+
+To capture latent emotional semantics beyond manual labels, we encode emotional sentences into dense vectors and cluster them with a fixed number of clusters \(k\).
+The cluster outputs are used as interpretable themes and compared across time periods.
+
+\subsection{Temporal and Authorial Analysis}
+
+We aggregate emotion signals by year and author, then inspect changes around the historical event window.
+This allows us to separate corpus-level trends from poet-specific expression shifts.
+
+\section{Experiments and Results}
+
+\subsection{Setup}
+
+The current release is built from a reproducible script chain:
+\texttt{anshi.py} \(\rightarrow\) \texttt{annotate.py} \(\rightarrow\) \texttt{anshi\_count.py} and
+\texttt{emopoem\_get.py} \(\rightarrow\) \texttt{embedding\_get.py} \(\rightarrow\) \texttt{kcluster.py}.
+
+Table~\ref{tab:main_results} is a template for core quantitative outcomes.
+Replace placeholder values with final statistics before submission.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+Metric & Value & Note \\
+\midrule
+Sentence instances & \textbf{[TODO]} & from cleaned poems \\
+Annotated instances & \textbf{[TODO]} & final labels \\
+Inter-annotator agreement & \textbf{[TODO]} & e.g., kappa/F1 \\
+Best cluster count \(k\) & \textbf{[TODO]} & elbow + inspection \\
+\bottomrule
+\end{tabular}
+\caption{Main dataset and analysis statistics (to be finalized).}
+\label{tab:main_results}
+\end{table}
+
+\subsection{Qualitative Findings}
+
+We observe three recurring qualitative patterns (to be backed by final numbers):
+\begin{itemize}
+    \item Emotion polarity shifts with historical phase transitions.
+    \item Some poets show stable style but changing emotional intensity.
+    \item Cluster themes reveal rhetorical modes not fully captured by discrete labels.
+\end{itemize}
+
+Figure~\ref{fig:cluster_placeholder} is a placeholder for cluster visualization.
+
+\begin{figure}[t]
+\centering
+\fbox{\rule{0pt}{3.2cm}\rule{0.95\linewidth}{0pt}}
+\caption{Placeholder for cluster visualization (replace with real figure).}
+\label{fig:cluster_placeholder}
+\end{figure}
+
+\section{Discussion, Limitations, and Ethics}
+
+\paragraph{Interpretation Scope.}
+Our conclusions depend on available poem metadata and annotation quality.
+Historical causality should be interpreted cautiously; we report correlations and temporal alignments rather than definitive causal claims.
+
+\paragraph{Limitations.}
+The current version may inherit label bias from prompt design, annotator preference, and domain-specific ambiguity in Classical Chinese syntax.
+Future work should evaluate alternative annotation schemes and robust uncertainty estimates.
+
+\paragraph{Ethics and Reproducibility.}
+The project uses historical literary texts and focuses on scholarly analysis.
+To support reproducibility, we provide script-level pipelines and explicit file dependencies.
+Any API-based annotation step should document model version, prompt settings, and cost constraints.
+
+\section{Conclusion}
+
+We provide a practical ACL short-paper blueprint for emotion analysis in Classical Chinese poetry around a major historical event.
+The key value is not only the empirical findings but also the reproducible workflow that new researchers can adapt quickly.
+The next step is to finalize numeric results, verify references, and submit an anonymized ACL-compliant version.
+
+\section*{Citation Notice}
+\small
+This draft intentionally uses placeholder citations for safety. Replace all
+\texttt{PLACEHOLDER\_*} entries in \texttt{refs.bib} with verified papers before submission.
+
+\bibliography{refs}
+\bibliographystyle{acl_natbib}
+
+\end{document}
