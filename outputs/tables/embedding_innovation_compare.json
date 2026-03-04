@@ -1,0 +1,82 @@
+{
+  "dataset": {
+    "num_samples": 3198,
+    "embedding_dim": 4096,
+    "word_proxy_labels": [
+      "Sorrow",
+      "Disgust",
+      "Joy",
+      "Anger",
+      "Fear",
+      "Praise",
+      "Confusion"
+    ]
+  },
+  "word_proxy_distribution": {
+    "counts": {
+      "Sorrow": 2625,
+      "Disgust": 42,
+      "Joy": 276,
+      "Anger": 100,
+      "Fear": 49,
+      "Praise": 65,
+      "Confusion": 41
+    },
+    "entropy_bits": 1.064446717152935,
+    "normalized_entropy": 0.37916357094341546
+  },
+  "embedding_cluster_distribution_k20": {
+    "num_clusters": 20,
+    "min_cluster_size": 102,
+    "max_cluster_size": 257,
+    "entropy_bits": 4.274610040645747,
+    "normalized_entropy": 0.9890516331593785
+  },
+  "stability": {
+    "k20": {
+      "embedding": {
+        "ari_mean": 0.465757049403522,
+        "ari_std": 0.0368102537481986,
+        "non_empty_clusters_mean": 20.0,
+        "non_empty_clusters_std": 0.0
+      },
+      "word_proxy": {
+        "ari_mean": 0.9967087191327402,
+        "ari_std": 0.0027156041714339633,
+        "non_empty_clusters_mean": 5.9,
+        "non_empty_clusters_std": 0.9433981132056604
+      }
+    },
+    "k7": {
+      "embedding": {
+        "ari_mean": 0.5169911225804654,
+        "ari_std": 0.09809432677026064,
+        "non_empty_clusters_mean": 7.0,
+        "non_empty_clusters_std": 0.0
+      },
+      "word_proxy": {
+        "ari_mean": 0.9819773324736877,
+        "ari_std": 0.015416717375549512,
+        "non_empty_clusters_mean": 4.3,
+        "non_empty_clusters_std": 1.004987562112089
+      }
+    },
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  "notes": [
+    "Word proxy is a deterministic single-word baseline built from lexical cues.",
+    "Embedding uses existing Qwen hidden-state vectors from appreciation_embeddings.npy.",
+    "KMeans is implemented in NumPy for environment portability."
+  ]
+}

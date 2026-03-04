@@ -1,0 +1,122 @@
+{
+  "source_files": [
+    "outputs/tables/svm_error_analysis_seed42.json",
+    "anshi_annotated.xlsx"
+  ],
+  "error_summary": {
+    "macro_f1": 0.44641718812292125,
+    "accuracy": 0.6441234405778069,
+    "per_class_f1": {
+      "哀": {
+        "f1": 0.7732256203115984,
+        "support": 879
+      },
+      "恶": {
+        "f1": 0.17582417582417584,
+        "support": 37
+      },
+      "乐": {
+        "f1": 0.5676567656765676,
+        "support": 306
+      },
+      "怒": {
+        "f1": 0.4598337950138504,
+        "support": 180
+      },
+      "惧": {
+        "f1": 0.425,
+        "support": 39
+      },
+      "好": {
+        "f1": 0.336283185840708,
+        "support": 53
+      },
+      "惊": {
+        "f1": 0.3870967741935484,
+        "support": 29
+      }
+    },
+    "top_confusions": [
+      {
+        "count": 86,
+        "from": "乐",
+        "to": "哀"
+      },
+      {
+        "count": 75,
+        "from": "哀",
+        "to": "乐"
+      },
+      {
+        "count": 63,
+        "from": "哀",
+        "to": "怒"
+      },
+      {
+        "count": 55,
+        "from": "怒",
+        "to": "哀"
+      },
+      {
+        "count": 27,
+        "from": "哀",
+        "to": "恶"
+      },
+      {
+        "count": 22,
+        "from": "哀",
+        "to": "好"
+      },
+      {
+        "count": 20,
+        "from": "乐",
+        "to": "怒"
+      },
+      {
+        "count": 20,
+        "from": "怒",
+        "to": "乐"
+      },
+      {
+        "count": 17,
+        "from": "好",
+        "to": "乐"
+      },
+      {
+        "count": 14,
+        "from": "哀",
+        "to": "惊"
+      }
+    ]
+  },
+  "interpretative_checks": {
+    "year757_zhuangsi_count": 76,
+    "year762_youshang_count": 187,
+    "year762_ailian_count": 5,
+    "example_year757_zhuangsi": {
+      "author": "张巡",
+      "title": "守睢阳作",
+      "line": "时将白羽挥",
+      "labels": [
+        "壮思"
+      ]
+    },
+    "example_year762_youshang": {
+      "author": "戎昱",
+      "title": "苦哉行五首 之二",
+      "line": "吞声不许哭",
+      "labels": [
+        "悲愁",
+        "忧伤"
+      ]
+    },
+    "example_year762_ailian": {
+      "author": "戎昱",
+      "title": "苦哉行五首 之四",
+      "line": "偏得浑家怜",
+      "labels": [
+        "爱恋"
+      ]
+    }
+  }
+}

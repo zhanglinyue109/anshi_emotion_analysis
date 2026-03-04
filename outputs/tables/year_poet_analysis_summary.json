@@ -1,0 +1,321 @@
+{
+  "source": "anshi_analysis.xlsx",
+  "year_primary_ratio_754_764": [
+    {
+      "year": 754,
+      "sorrow": 0.6659,
+      "disgust": 0.023,
+      "joy": 0.159,
+      "anger": 0.076,
+      "fear": 0.0161,
+      "praise": 0.0288,
+      "confusion": 0.0311
+    },
+    {
+      "year": 755,
+      "sorrow": 0.6269,
+      "disgust": 0.0206,
+      "joy": 0.1624,
+      "anger": 0.1161,
+      "fear": 0.0154,
+      "praise": 0.0226,
+      "confusion": 0.036
+    },
+    {
+      "year": 756,
+      "sorrow": 0.6018,
+      "disgust": 0.0222,
+      "joy": 0.1519,
+      "anger": 0.1264,
+      "fear": 0.0287,
+      "praise": 0.032,
+      "confusion": 0.0369
+    },
+    {
+      "year": 757,
+      "sorrow": 0.5664,
+      "disgust": 0.0288,
+      "joy": 0.1616,
+      "anger": 0.1592,
+      "fear": 0.0168,
+      "praise": 0.0344,
+      "confusion": 0.0328
+    },
+    {
+      "year": 758,
+      "sorrow": 0.6297,
+      "disgust": 0.0167,
+      "joy": 0.1862,
+      "anger": 0.09,
+      "fear": 0.0136,
+      "praise": 0.0303,
+      "confusion": 0.0335
+    },
+    {
+      "year": 759,
+      "sorrow": 0.6463,
+      "disgust": 0.0199,
+      "joy": 0.1347,
+      "anger": 0.1168,
+      "fear": 0.0223,
+      "praise": 0.0291,
+      "confusion": 0.031
+    },
+    {
+      "year": 760,
+      "sorrow": 0.6388,
+      "disgust": 0.0136,
+      "joy": 0.2097,
+      "anger": 0.0641,
+      "fear": 0.0078,
+      "praise": 0.0408,
+      "confusion": 0.0252
+    },
+    {
+      "year": 761,
+      "sorrow": 0.6276,
+      "disgust": 0.0444,
+      "joy": 0.1616,
+      "anger": 0.0887,
+      "fear": 0.0158,
+      "praise": 0.0333,
+      "confusion": 0.0285
+    },
+    {
+      "year": 762,
+      "sorrow": 0.7024,
+      "disgust": 0.0312,
+      "joy": 0.1239,
+      "anger": 0.0722,
+      "fear": 0.0166,
+      "praise": 0.0244,
+      "confusion": 0.0293
+    },
+    {
+      "year": 763,
+      "sorrow": 0.6653,
+      "disgust": 0.0116,
+      "joy": 0.1274,
+      "anger": 0.1126,
+      "fear": 0.0189,
+      "praise": 0.0242,
+      "confusion": 0.04
+    },
+    {
+      "year": 764,
+      "sorrow": 0.6403,
+      "disgust": 0.0292,
+      "joy": 0.1278,
+      "anger": 0.1111,
+      "fear": 0.0278,
+      "praise": 0.0389,
+      "confusion": 0.025
+    }
+  ],
+  "year_secondary_key_754_764": [
+    {
+      "year": 754,
+      "youshang": 0.144,
+      "beichou": 0.1382,
+      "sinian": 0.0853,
+      "zhuangsi": 0.0507,
+      "ailian": 0.0127
+    },
+    {
+      "year": 755,
+      "youshang": 0.1285,
+      "beichou": 0.1357,
+      "sinian": 0.0719,
+      "zhuangsi": 0.0596,
+      "ailian": 0.0082
+    },
+    {
+      "year": 756,
+      "youshang": 0.1248,
+      "beichou": 0.1396,
+      "sinian": 0.0796,
+      "zhuangsi": 0.0575,
+      "ailian": 0.0082
+    },
+    {
+      "year": 757,
+      "youshang": 0.1256,
+      "beichou": 0.1528,
+      "sinian": 0.0696,
+      "zhuangsi": 0.0608,
+      "ailian": 0.0104
+    },
+    {
+      "year": 758,
+      "youshang": 0.1506,
+      "beichou": 0.0868,
+      "sinian": 0.0858,
+      "zhuangsi": 0.0513,
+      "ailian": 0.0146
+    },
+    {
+      "year": 759,
+      "youshang": 0.14,
+      "beichou": 0.1604,
+      "sinian": 0.0644,
+      "zhuangsi": 0.0509,
+      "ailian": 0.0121
+    },
+    {
+      "year": 760,
+      "youshang": 0.1456,
+      "beichou": 0.0971,
+      "sinian": 0.1029,
+      "zhuangsi": 0.0447,
+      "ailian": 0.0155
+    },
+    {
+      "year": 761,
+      "youshang": 0.1474,
+      "beichou": 0.1252,
+      "sinian": 0.0856,
+      "zhuangsi": 0.038,
+      "ailian": 0.0063
+    },
+    {
+      "year": 762,
+      "youshang": 0.1824,
+      "beichou": 0.1307,
+      "sinian": 0.0985,
+      "zhuangsi": 0.0361,
+      "ailian": 0.0049
+    },
+    {
+      "year": 763,
+      "youshang": 0.1705,
+      "beichou": 0.1295,
+      "sinian": 0.0926,
+      "zhuangsi": 0.0411,
+      "ailian": 0.0063
+    },
+    {
+      "year": 764,
+      "youshang": 0.1417,
+      "beichou": 0.1486,
+      "sinian": 0.075,
+      "zhuangsi": 0.0375,
+      "ailian": 0.0083
+    }
+  ],
+  "poet_secondary_top8_by_sentence_count": [
+    {
+      "poet": "杜甫",
+      "sentences": 3738,
+      "youshang": 0.1527,
+      "beichou": 0.1709,
+      "sinian": 0.0654,
+      "zhuangsi": 0.0441
+    },
+    {
+      "poet": "李白",
+      "sentences": 1783,
+      "youshang": 0.1063,
+      "beichou": 0.1175,
+      "sinian": 0.0595,
+      "zhuangsi": 0.0898
+    },
+    {
+      "poet": "刘长卿",
+      "sentences": 819,
+      "youshang": 0.1783,
+      "beichou": 0.0783,
+      "sinian": 0.1123,
+      "zhuangsi": 0.0245
+    },
+    {
+      "poet": "岑参",
+      "sentences": 747,
+      "youshang": 0.1113,
+      "beichou": 0.0799,
+      "sinian": 0.087,
+      "zhuangsi": 0.0656
+    },
+    {
+      "poet": "独孤及",
+      "sentences": 276,
+      "youshang": 0.1242,
+      "beichou": 0.0752,
+      "sinian": 0.1536,
+      "zhuangsi": 0.0523
+    },
+    {
+      "poet": "元结",
+      "sentences": 272,
+      "youshang": 0.0983,
+      "beichou": 0.1838,
+      "sinian": 0.0342,
+      "zhuangsi": 0.0085
+    },
+    {
+      "poet": "高适",
+      "sentences": 229,
+      "youshang": 0.1018,
+      "beichou": 0.1228,
+      "sinian": 0.0632,
+      "zhuangsi": 0.0912
+    },
+    {
+      "poet": "钱起",
+      "sentences": 200,
+      "youshang": 0.1602,
+      "beichou": 0.1068,
+      "sinian": 0.1068,
+      "zhuangsi": 0.0534
+    }
+  ],
+  "sinian_top4_min8": [
+    {
+      "poet": "朱放",
+      "sentences": 8,
+      "sinian": 0.4444
+    },
+    {
+      "poet": "灵一",
+      "sentences": 28,
+      "sinian": 0.3043
+    },
+    {
+      "poet": "刘方平",
+      "sentences": 16,
+      "sinian": 0.2963
+    },
+    {
+      "poet": "郎士元",
+      "sentences": 40,
+      "sinian": 0.2273
+    }
+  ],
+  "key_points": {
+    "sorrow_peak": {
+      "year": 762,
+      "value": 0.7024
+    },
+    "sorrow_min": {
+      "year": 757,
+      "value": 0.5664
+    },
+    "joy_peak": {
+      "year": 760,
+      "value": 0.2097
+    },
+    "anger_peak": {
+      "year": 757,
+      "value": 0.1592
+    },
+    "zhuangsi_peak_year": {
+      "year": 757,
+      "value": 0.0608
+    },
+    "zhuangsi_762": 0.0361,
+    "zhuangsi_764": 0.0375,
+    "ailian_min_year": {
+      "year": 762,
+      "value": 0.0049
+    }
+  }
+}

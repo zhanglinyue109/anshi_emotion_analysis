@@ -1,0 +1,105 @@
+{
+  "num_sentences": 3198,
+  "valid_pairs": 3198,
+  "empty_pairs": 0,
+  "exact_match_rate_promptA_vs_promptB": 0.5031269543464666,
+  "mismatch_rate_promptA_vs_promptB": 0.49687304565353346,
+  "prompt_a": {
+    "unique_words": 542,
+    "normalized_entropy": 0.8072204331627675,
+    "top10": [
+      [
+        "孤寂",
+        159
+      ],
+      [
+        "悲愤",
+        140
+      ],
+      [
+        "思念",
+        137
+      ],
+      [
+        "悲凉",
+        107
+      ],
+      [
+        "豪迈",
+        102
+      ],
+      [
+        "思乡",
+        92
+      ],
+      [
+        "闲适",
+        87
+      ],
+      [
+        "悲怆",
+        81
+      ],
+      [
+        "悲伤",
+        75
+      ],
+      [
+        "惆怅",
+        62
+      ]
+    ]
+  },
+  "prompt_b": {
+    "unique_words": 431,
+    "normalized_entropy": 0.7638799758339914,
+    "top10": [
+      [
+        "悲凉",
+        253
+      ],
+      [
+        "孤寂",
+        171
+      ],
+      [
+        "惆怅",
+        161
+      ],
+      [
+        "悲愤",
+        142
+      ],
+      [
+        "豪迈",
+        118
+      ],
+      [
+        "悲伤",
+        113
+      ],
+      [
+        "闲适",
+        93
+      ],
+      [
+        "思念",
+        92
+      ],
+      [
+        "哀伤",
+        88
+      ],
+      [
+        "悲壮",
+        83
+      ]
+    ]
+  },
+  "embedding_cluster_k20": {
+    "normalized_entropy": 0.9890516331593785,
+    "num_clusters": 20,
+    "min_cluster_size": 102,
+    "max_cluster_size": 257
+  }
+}
