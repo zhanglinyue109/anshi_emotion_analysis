@@ -5,15 +5,17 @@ import pandas as pd
 import json
 from tqdm import tqdm
 import time
+try:
+    from api_config import get_api_config, normalize_openai_base_url
+except ModuleNotFoundError:
+    from scripts.api_config import get_api_config, normalize_openai_base_url
 
 # ======================
 # 配置 API（请确认密钥和模型正确）
 # ======================
-API_KEY = "[REDACTED_API_KEY_2]"
-BASE_URL = "https://yeysai.com/v1"
-MODEL = "deepseek-v3.1-think-250821"
+API_KEY, BASE_URL, MODEL = get_api_config()
 
-client = openai.OpenAI(api_key=API_KEY, base_url=BASE_URL)
+client = openai.OpenAI(api_key=API_KEY, base_url=normalize_openai_base_url(BASE_URL))
 
 MAX_SECONDARY = 3
 

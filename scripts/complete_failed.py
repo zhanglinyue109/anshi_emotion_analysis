@@ -5,20 +5,22 @@ import re
 import time
 import os
 from tqdm import tqdm
+try:
+    from api_config import get_api_config, normalize_openai_base_url
+except ModuleNotFoundError:
+    from scripts.api_config import get_api_config, normalize_openai_base_url
 
 # ======================
 # 配置（必须与主程序一致）
 # ======================
-API_KEY = "[REDACTED_API_KEY_1]"
-BASE_URL = "http://43.163.86.62:3000/v1"
-MODEL = "deepseek-v3"
+API_KEY, BASE_URL, MODEL = get_api_config()
 
 OUTPUT_FILE = "anshi_annotated.xlsx"  # 你的输出文件路径（支持 .xlsx / .csv）
 MAX_SECONDARY = 3
 MAX_RETRY_ATTEMPTS = 10  # 对每行最多重试 10 次（直到成功）
 
 # 初始化 OpenAI 客户端
-client = openai.OpenAI(api_key=API_KEY, base_url=BASE_URL)
+client = openai.OpenAI(api_key=API_KEY, base_url=normalize_openai_base_url(BASE_URL))
 
 # ======================
 # 安全解析 JSON

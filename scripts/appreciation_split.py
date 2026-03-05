@@ -2,13 +2,15 @@ import json
 import openai
 import time
 import re
+try:
+    from api_config import get_api_config, normalize_openai_base_url
+except ModuleNotFoundError:
+    from scripts.api_config import get_api_config, normalize_openai_base_url
 
 # === 配置 ===
-API_KEY = "[REDACTED_API_KEY_1]"
-BASE_URL = "http://43.163.86.62:3000/v1"
-MODEL = "deepseek-v3"
+API_KEY, BASE_URL, MODEL = get_api_config()
 
-client = openai.OpenAI(api_key=API_KEY, base_url=BASE_URL)
+client = openai.OpenAI(api_key=API_KEY, base_url=normalize_openai_base_url(BASE_URL))
 
 INPUT_FILE = "appreciation.jsonl"
 OUTPUT_FILE = "aligned_output.jsonl"

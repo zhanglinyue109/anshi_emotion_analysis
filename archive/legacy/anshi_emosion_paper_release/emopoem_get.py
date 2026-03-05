@@ -1,10 +1,11 @@
 import openai
 import json
+import os
 from tqdm import tqdm
 # 配置 API Key 和 Base URL
-API_KEY = "[REDACTED_API_KEY_1]"
-BASE_URL = "http://43.163.86.62:3000/v1"
-MODEL = "deepseek-v3"
+API_KEY = os.getenv("API_KEY", "")
+BASE_URL = os.getenv("BASE_URL", "http://43.163.86.62:3000/v1")
+MODEL = os.getenv("MODEL", "deepseek-v3")
 
 def chat_with_gpt4(prompt, model=MODEL):
     """与ChatGPT API交互的函数"""

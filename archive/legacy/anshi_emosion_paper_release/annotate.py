@@ -9,9 +9,9 @@ import os
 # ======================
 # 配置区（按需修改）
 # ======================
-API_KEY = "[REDACTED_API_KEY_1]"
-BASE_URL = "http://43.163.86.62:3000/v1"
-MODEL = "deepseek-v3"
+API_KEY = os.getenv("API_KEY", "")
+BASE_URL = os.getenv("BASE_URL", "http://43.163.86.62:3000/v1")
+MODEL = os.getenv("MODEL", "deepseek-v3")
 
 INPUT_FILE = "anshi_poems.csv"   # 支持 .xlsx 或 .csv
 OUTPUT_FILE = "anshi_annotated.xlsx"

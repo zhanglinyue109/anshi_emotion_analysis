@@ -2,14 +2,16 @@ import pandas as pd
 import httpx
 import time
 import re
+try:
+    from api_config import get_api_config, build_chat_completions_url
+except ModuleNotFoundError:
+    from scripts.api_config import get_api_config, build_chat_completions_url
 
 # === 配置 ===
 INPUT_FILE = "/home/kongcunliang/zhanglinyue/tang_jscd/appreciation_poem/anshi.xlsx"  # 输入文件
 OUTPUT_FILE = "translate_sample_100.xlsx"  # 输出文件（建议改名以区分）
 
-API_KEY = "[REDACTED_API_KEY_2]"
-BASE_URL = "https://yeysai.com/v1"
-MODEL = "deepseek-v3.2-thinking"
+API_KEY, BASE_URL, MODEL = get_api_config()
 
 PROMPT_WITH_CONTEXT = '''“{full_poem}”是一首唐诗。请结合语境，将其中“{single_line}”这句诗翻译成白话文，要求翻译出诗句包含的情感，但若诗句本身无情感，则不必硬翻译出情感。请仅输出白话文翻译本身，不要包含任何解释、引号、序号或其他额外文字。'''
 
@@ -47,7 +49,7 @@ def call_model(prompt: str, max_retries: int = 3) -> str:
     for attempt in range(1, max_retries + 1):
         try:
             with httpx.Client(timeout=120.0) as client:
-                response = client.post(f"{BASE_URL}/chat/completions", json=payload, headers=headers)
+                response = client.post(build_chat_completions_url(BASE_URL), json=payload, headers=headers)
                 response.raise_for_status()
                 raw_output = response.json()['choices'][0]['message']['content'].strip()
                 return raw_output

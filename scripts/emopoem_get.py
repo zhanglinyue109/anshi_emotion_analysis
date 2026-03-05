@@ -1,14 +1,16 @@
 import openai
 import json
 from tqdm import tqdm
+try:
+    from api_config import get_api_config, normalize_openai_base_url
+except ModuleNotFoundError:
+    from scripts.api_config import get_api_config, normalize_openai_base_url
 # 配置 API Key 和 Base URL
-API_KEY = "[REDACTED_API_KEY_1]"
-BASE_URL = "http://43.163.86.62:3000/v1"
-MODEL = "deepseek-v3"
+API_KEY, BASE_URL, MODEL = get_api_config()
 
 def chat_with_gpt4(prompt, model=MODEL):
     """与ChatGPT API交互的函数"""
-    client = openai.OpenAI(api_key=API_KEY, base_url=BASE_URL)
+    client = openai.OpenAI(api_key=API_KEY, base_url=normalize_openai_base_url(BASE_URL))
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
